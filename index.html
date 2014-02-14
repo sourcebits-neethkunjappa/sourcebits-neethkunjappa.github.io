@@ -1,50 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>function allowDrop(ev)
-{
-ev.preventDefault();
-}
 
-function drag(ev)
-{
-ev.dataTransfer.setData("Text",ev.target.id);
-}
-
-function drop(ev)
-{
-ev.preventDefault();
-var data = ev.dataTransfer.getData("Text");
-ev.target.appendChild(document.getElementById(data));
-}
-</script>
-<title>Neeth Kunjappa</title>
-<style>
-table,th,td
-{
-border:1px solid black;
-border-collapse:collapse;
-}
-</style>
 </head>
 <body>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<h1>Welcome to W3Schools</h1>
 
-<img id="drag1" src="img_logo.gif" draggable="true"
-ondragstart="drag(event)" width="336" height="69"
+<h2>Web Site Main Ingredients</h2>
 
-Hello
-<table style="width:300px">
-<tr>
-  <td>Jill</td>
-  <td>Smith</td> 
-  <td>50</td>
-</tr>
-<tr>
-  <td>Eve</td>
-  <td>Jackson</td> 
-  <td>94</td>
-</tr>
-</table>
+<p>A Home Page (Default.cshtml)</p>
+<p>A Layout File (Layout.cshtml)</p>
+<p>A Style Sheet (Site.css)</p>
+
 </body>
 </html>
