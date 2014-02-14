@@ -4,6 +4,8 @@
 
 </head>
 <body>
+@{Layout="Layout.cshtml";}
+
 <h1>Welcome to W3Schools</h1>
 
 <h2>Web Site Main Ingredients</h2>
@@ -11,6 +13,31 @@
 <p>A Home Page (Default.cshtml)</p>
 <p>A Layout File (Layout.cshtml)</p>
 <p>A Style Sheet (Site.css)</p>
+
+@{Layout="Layout.cshtml";
+var db = Database.Open("Northwind"); 
+var query = db.Query("SELECT CompanyName,City,Country FROM Customers"); 
+}
+<html> 
+<body> 
+<h1>Customers</h1> 
+<table> 
+<tr>
+<th>Name</th> 
+<th>City</th> 
+<th>Country</th> 
+</tr>
+@foreach(var row in query)
+{
+<tr> 
+<td>@row.CompanyName</td> 
+<td>@row.City</td> 
+<td>@row.Country</td> 
+</tr> 
+}
+</table> 
+</body> 
+</html>
 
 </body>
 </html>
